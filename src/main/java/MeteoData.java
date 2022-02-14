@@ -176,9 +176,6 @@ this.lowerLimitOfClouds = lowerLimitOfClouds;
         case "SN":
             this.whetherCode.add(WhetherCode.SN);
             break;
-        default:
-            this.whetherCode.add(null);
-            break;
     }
     }
     public void setNumberOfClouds(Integer numberOfClouds) {

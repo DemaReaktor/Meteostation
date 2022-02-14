@@ -6,6 +6,7 @@ import org.apache.poi.ss.usermodel.Row;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -26,6 +27,7 @@ if(start<=index){
     Iterator<Cell> cellIterator = row.cellIterator();
         Cell cell;
         MeteoData meteo = new MeteoData();
+        meteo.setMonth(month);
 
         while (cellIterator.hasNext()){
 cell =   cellIterator.next();
@@ -111,4 +113,53 @@ switch (cell.getColumnIndex()){
         MeteoData[] f=new MeteoData[datas.size()];
         return datas.toArray(f);
     }
+
+    public static void write(MeteoData[] data,String fileName, int start) throws Exception{
+        HSSFWorkbook workbook = new HSSFWorkbook();
+        HSSFSheet sheet = workbook.createSheet("Employees sheet");
+
+        int rownum = start-1;
+        Row row;
+
+        for (MeteoData element : data) {
+            rownum++;
+            row = sheet.createRow(rownum);
+
+            row.createCell(0, CellType.NUMERIC).setCellValue(element.getDay());
+                row.createCell(1, CellType.STRING).setCellValue(element.getHour().toString()+
+                        ":"+element.getMinute().toString());
+            if(element.getTemperature()!=null)
+                row.createCell(2, CellType.NUMERIC).setCellValue(element.getTemperature());
+            if(element.getWind()!=null)
+                row.createCell(3, CellType.STRING).setCellValue(element.getWind().toString());
+            if(element.getWindSpeed()!=null)
+                row.createCell(4, CellType.NUMERIC).setCellValue(element.getWindSpeed());
+            if(element.getWhetherCode()!=null)
+            {
+                String str="";
+                boolean f=true;
+                for(WhetherCode code:element.getWhetherCode()){
+                    if(f)
+                        f=false;
+                    else
+                        str+="+";
+                    str+=code.toString();
+                }
+                row.createCell(5, CellType.STRING).setCellValue(str);
+            }
+            if(element.getNumberOfClouds()!=null)
+                row.createCell(6, CellType.NUMERIC).setCellValue(element.getNumberOfClouds());
+            if(element.getRangeOfVision()!=null)
+                row.createCell(7, CellType.NUMERIC).setCellValue(element.getRangeOfVision());
+            if(element.getRelativeHumidity()!=null)
+                row.createCell(8, CellType.NUMERIC).setCellValue(element.getRelativeHumidity());
+            if(element.getAtmosphericPressure()!=null)
+                row.createCell(9, CellType.NUMERIC).setCellValue(element.getAtmosphericPressure());
+            if(element.getLowerLimitOfClouds()!=null)
+                row.createCell(10, CellType.NUMERIC).setCellValue(element.getLowerLimitOfClouds());
+    }
+        File file = new File("Data.xls");
+        FileOutputStream outFile = new FileOutputStream(file);
+        workbook.write(outFile);
+}
 }
