@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
 public class MeteoData {
 private Integer month;
 private Integer day;
@@ -6,7 +10,7 @@ private Integer minute;
 private Integer temperature;
 private Wind wind;
 private Integer windSpeed;
-private WhetherCode whetherCode;
+private List<WhetherCode> whetherCode;
 private Integer numberOfClouds;
 private Double rangeOfVision;
 private Integer relativeHumidity;
@@ -29,7 +33,7 @@ public MeteoData(){
     this.lowerLimitOfClouds = null;
 }
 public MeteoData(Integer month,Integer day,Integer hour,Integer minute,Integer temperature,Wind wind,
-                 Integer windSpeed, WhetherCode whetherCode, Integer numberOfClouds,Double rangeOfVision,
+                 Integer windSpeed, List<WhetherCode> whetherCode, Integer numberOfClouds,Double rangeOfVision,
                  Integer relativeHumidity,Integer atmosphericPressure, Integer lowerLimitOfClouds){
 //if(month<1||month>12||day<1||day>31||hour<0||hour>24||minute<0||minute>60||windSpeed<0||numberOfClouds<0||
 //numberOfClouds>10||relativeHumidity<0||relativeHumidity>100||lowerLimitOfClouds<0)
@@ -73,7 +77,7 @@ this.lowerLimitOfClouds = lowerLimitOfClouds;
     public Integer getWindSpeed() {
         return windSpeed;
     }
-    public WhetherCode getWhetherCode() {
+    public List<WhetherCode> getWhetherCode() {
         return whetherCode;
     }
     public Integer getNumberOfClouds() {
@@ -131,46 +135,49 @@ this.lowerLimitOfClouds = lowerLimitOfClouds;
     public void setWindSpeed(Integer windSpeed) {
         this.windSpeed = windSpeed;
     }
-    public void setWhetherCode(WhetherCode whetherCode) {
+    public void setWhetherCode(List<WhetherCode> whetherCode) {
         this.whetherCode = whetherCode;
     }
     public void setWhetherCode(String whetherCode){
-    switch (whetherCode){
+    List<String> codes= Arrays.stream(whetherCode.split("\\+")).toList();
+    this.whetherCode=new LinkedList<>();
+    for (String element:codes)
+    switch (element) {
         case "CL":
-            this.whetherCode = WhetherCode.CL;
+            this.whetherCode.add(WhetherCode.CL);
             break;
         case "BR":
-            this.whetherCode = WhetherCode.BR;
+            this.whetherCode.add(WhetherCode.BR);
             break;
         case "DZ":
-            this.whetherCode = WhetherCode.DZ;
+            this.whetherCode.add(WhetherCode.DZ);
             break;
         case "FG":
-            this.whetherCode = WhetherCode.FG;
+            this.whetherCode.add(WhetherCode.FG);
             break;
         case "HL":
-            this.whetherCode = WhetherCode.HL;
+            this.whetherCode.add(WhetherCode.HL);
             break;
         case "HZ":
-            this.whetherCode = WhetherCode.HZ;
+            this.whetherCode.add(WhetherCode.HZ);
             break;
         case "RA":
-            this.whetherCode = WhetherCode.RA;
+            this.whetherCode.add(WhetherCode.RA);
             break;
         case "SHRA":
-            this.whetherCode = WhetherCode.SHRA;
+            this.whetherCode.add(WhetherCode.SHRA);
             break;
         case "SHSN":
-            this.whetherCode = WhetherCode.SHSN;
+            this.whetherCode.add(WhetherCode.SHSN);
             break;
         case "TS":
-            this.whetherCode = WhetherCode.TS;
+            this.whetherCode.add(WhetherCode.TS);
             break;
         case "SN":
-            this.whetherCode = WhetherCode.SN;
+            this.whetherCode.add(WhetherCode.SN);
             break;
         default:
-            this.whetherCode = null;
+            this.whetherCode.add(null);
             break;
     }
     }
@@ -189,12 +196,36 @@ this.lowerLimitOfClouds = lowerLimitOfClouds;
     public void setLowerLimitOfClouds(Integer lowerLimitOfClouds) {
         this.lowerLimitOfClouds = lowerLimitOfClouds;
     }
+
+    @Override
+    public String toString() {
+        return "MeteoData{" +
+                "month=" + month +
+                ", day=" + day +
+                ", hour=" + hour +
+                ", minute=" + minute +
+                ", temperature=" + temperature +
+                ", wind=" + wind +
+                ", windSpeed=" + windSpeed +
+                ", whetherCode=" + whetherCode +
+                ", numberOfClouds=" + numberOfClouds +
+                ", rangeOfVision=" + rangeOfVision +
+                ", relativeHumidity=" + relativeHumidity +
+                ", atmosphericPressure=" + atmosphericPressure +
+                ", lowerLimitOfClouds=" + lowerLimitOfClouds +
+                '}';
+    }
 }
 enum Wind{
     North,
     South,
     East,
     West,
+    N_W,
+    N_E,
+    S_W,
+    S_E,
+    Variable,
     None
 }
 enum WhetherCode{
@@ -208,5 +239,5 @@ enum WhetherCode{
     TS,
     DZ,
     HZ,
-    HL,
+    HL
 }
