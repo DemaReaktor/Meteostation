@@ -1,1353 +1,165 @@
 <!DOCTYPE html>
-<html>
-  <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-    />
-    <link rel="stylesheet" type="text/css" href="D:/Programs/IntelliJ IDEA Community Edition 2021.2.2/CourseWork/Meteostation/src/main/resources/templates/css/common.css" />
-    <link rel="stylesheet" type="text/css" href="D:/Programs/IntelliJ IDEA Community Edition 2021.2.2/CourseWork/Meteostation/src/main/resources/templates/css/fonts.css" />
-    <link rel="stylesheet" type="text/css" href="D:/Programs/IntelliJ IDEA Community Edition 2021.2.2/CourseWork/Meteostation/src/main/resources/templates/css/utils.css" />
-    <link rel="stylesheet" type="text/css" href="D:/Programs/IntelliJ IDEA Community Edition 2021.2.2/CourseWork/Meteostation/src/main/resources/templates/css/Page.css" />
-
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6, hr, p, figure {
-    display: block;
-    font-size: 1em;
-    font-weight: normal;
-    margin: 0;
-    border-width: 0;
-}
-
-ul, ul {
-    display: block;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    display: block;
-}
-
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-@media (max-width: 99999px) {
-    .max\:show {
-        display: flex;
-    }
-
-    .xxxl\:show {
-        display: none;
-    }
-
-    .xxl\:show {
-        display: none;
-    }
-
-    .xl\:show {
-        display: none;
-    }
-
-    .lg\:show {
-        display: none;
-    }
-
-    .md\:show {
-        display: none;
-    }
-
-    .sm\:show {
-        display: none;
-    }
-
-    .xs\:show {
-        display: none;
-    }
-
-    .max\:hide {
-        display: none;
-    }
-}
-
-@media (max-width: 2999px) {
-    .xxxl\:show {
-        display: flex;
-    }
-
-    .xxxl\:hide {
-        display: none;
-    }
-}
-
-@media (max-width: 1919px) {
-    .xxl\:show {
-        display: flex;
-    }
-
-    .xxl\:hide {
-        display: none;
-    }
-}
-
-@media (max-width: 1399px) {
-    .xl\:show {
-        display: flex;
-    }
-
-    .xl\:hide {
-        display: none;
-    }
-}
-
-@media (max-width: 1199px) {
-    .lg\:show {
-        display: flex;
-    }
-
-    .lg\:hide {
-        display: none;
-    }
-}
-
-@media (max-width: 991px) {
-    .md\:show {
-        display: flex;
-    }
-
-    .md\:hide {
-        display: none;
-    }
-}
-
-@media (max-width: 767px) {
-    .sm\:show {
-        display: flex;
-    }
-
-    .sm\:hide {
-        display: none;
-    }
-}
-
-@media (max-width: 575px) {
-    .xs\:show {
-        display: flex;
-    }
-
-    .xs\:hide {
-        display: none;
-    }
-}
-
-.headroom {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10000;
-
-    will-change: transform;
-    transition: transform 200ms linear;
-}
-
-.headroom--pinned {
-    transform: translateY(0%);
-}
-
-.headroom--unpinned {
-    transform: translateY(-100%);
-}
-
-/* fonts.css */
-@import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
-@font-face {
-  font-family: "FontAwesome";
-  font-weight: normal;
-  font-style: normal;
-  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
-  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0")
-      format("embedded-opentype"),
-    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0")
-      format("woff2"),
-    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0")
-      format("woff"),
-    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0")
-      format("truetype"),
-    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular")
-      format("svg");
-}
-
-/* This source code is exported from pxCode, you can get more document from https://www.pxcode.io */
-.page-main {
-  display: flex;
-  flex-direction: column;
-  background-color: #171655; }
-
-.page-main.layout {
-  position: relative;
-  overflow: hidden;
-  /*min-height: 2250px;*/
-  flex-shrink: 0; }
-
-.page-section1__section1 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section1__section1.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content; }
-
-.page-section1__block8 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section1__block8.layout {
-  position: relative;
-  height: 30px;
-  width: 5.83%;
-  margin: 18px 1.11% 29px 93.06%; }
-  @media (max-width: 1199px) {
-    .page-section1__block8.layout {
-      margin: 16px 1.11% 25px 93.06%; } }
-  @media (max-width: 991px) {
-    .page-section1__block8.layout {
-      margin: 13px 1.11% 22px 93.06%; } }
-  @media (max-width: 767px) {
-    .page-section1__block8.layout {
-      margin: 11px 1.11% 18px 93.06%; } }
-  @media (max-width: 575px) {
-    .page-section1__block8.layout {
-      margin: 10px 1.11% 17px 93.06%; } }
-  @media (max-width: 479px) {
-    .page-section1__block8.layout {
-      margin: 9px 1.11% 15px 93.06%; } }
-  @media (max-width: 383px) {
-    .page-section1__block8.layout {
-      margin: 9px 1.11% 14px 93.06%; } }
-
-.page-section1__box4 {
-  background-color: rgba(0, 0, 0, 0.776);
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.247059);
-  opacity: 0.77; }
-
-.page-section1__box4.layout {
-  position: absolute;
-  top: -18px;
-  height: 65px;
-  left: -1340px;
-  width: 1440px; }
-
-.page-section1__subtitle {
-  display: flex;
-  justify-content: flex-end;
-  font: 20px/1.2 "Space Mono", Helvetica, Arial, serif;
-  color: #bfbfbf;
-  text-align: right;
-  letter-spacing: -2px;
-  opacity: 0.7; }
-  @media (max-width: 1199px) {
-    .page-section1__subtitle {
-      font-size: 19px;
-      text-align: right; } }
-  @media (max-width: 991px) {
-    .page-section1__subtitle {
-      font-size: 18px; } }
-  @media (max-width: 767px) {
-    .page-section1__subtitle {
-      font-size: 17px; } }
-  @media (max-width: 479px) {
-    .page-section1__subtitle {
-      font-size: 16px; } }
-
-.page-section1__subtitle.layout {
-  position: absolute;
-  top: 0px;
-  height: 24px;
-  left: -67px;
-  width: 77px; }
-
-.page-section1__subtitle1 {
-  font: 20px/1.2 "Space Mono", Helvetica, Arial, serif;
-  color: white;
-  letter-spacing: -2px; }
-  @media (max-width: 1199px) {
-    .page-section1__subtitle1 {
-      font-size: 19px;
-      text-align: left; } }
-  @media (max-width: 991px) {
-    .page-section1__subtitle1 {
-      font-size: 18px; } }
-  @media (max-width: 767px) {
-    .page-section1__subtitle1 {
-      font-size: 17px; } }
-  @media (max-width: 479px) {
-    .page-section1__subtitle1 {
-      font-size: 16px; } }
-
-.page-section1__subtitle1.layout {
-  position: absolute;
-  top: 0px;
-  height: 24px;
-  left: -978px;
-  width: 46px; }
-
-.page-section1__subtitle1.layout1 {
-  position: absolute;
-  top: 0px;
-  height: 24px;
-  left: -1250px;
-  width: 231px; }
-
-.page-section2__section2 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section2__section2.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content; }
-
-.page-section2__block6 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section2__block6.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  width: 87.92%;
-  margin: 63px auto 0px; }
-  @media (max-width: 1399px) {
-    .page-section2__block6.layout {
-      width: 90.66%; } }
-  @media (max-width: 1199px) {
-    .page-section2__block6.layout {
-      width: 92.82%;
-      margin: 54px auto 0px; } }
-  @media (max-width: 991px) {
-    .page-section2__block6.layout {
-      width: 94.52%;
-      margin: 44px auto 0px; } }
-  @media (max-width: 767px) {
-    .page-section2__block6.layout {
-      width: 95.83%;
-      margin: 36px auto 0px; } }
-  @media (max-width: 575px) {
-    .page-section2__block6.layout {
-      width: 96.84%;
-      margin: 32px auto 0px; } }
-  @media (max-width: 479px) {
-    .page-section2__block6.layout {
-      width: 97.61%;
-      margin: 28px auto 0px; } }
-  @media (max-width: 383px) {
-    .page-section2__block6.layout {
-      width: 98.2%;
-      margin: 25px auto 0px; } }
-
-.page-section2__group {
-  display: flex;
-  flex-direction: column;
-  background: var(--src) center center/contain no-repeat;
-  border: 1px solid white;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.247059)); }
-
-.page-section2__group.layout {
-  position: relative;
-  flex-grow: 1;
-  min-height: 537px;
-  flex-shrink: 0;
-  margin: 0px 3px; }
-  @media (max-width: 1199px) {
-    .page-section2__group.layout {
-      margin: 0px 5px; } }
-
-.page-section2__block7 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section2__block7.layout {
-  position: absolute;
-  top: 149px;
-  height: 244px;
-  width: 1266px;
-  right: -3px; }
-
-.page-section2__flex {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.25); }
-
-.page-section2__flex.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  margin: 0px 3px; }
-  @media (max-width: 1199px) {
-    .page-section2__flex.layout {
-      margin: 0px 5px; } }
-
-.page-section2__hero-title {
-  display: flex;
-  justify-content: center;
-  font: 700 36px/1.2 "Space Mono", Helvetica, Arial, serif;
-  color: white;
-  text-align: center;
-  letter-spacing: -3.6px; }
-  @media (max-width: 1199px) {
-    .page-section2__hero-title {
-      font-size: 32px;
-      text-align: center; } }
-  @media (max-width: 991px) {
-    .page-section2__hero-title {
-      font-size: 29px; } }
-  @media (max-width: 767px) {
-    .page-section2__hero-title {
-      font-size: 25px; } }
-  @media (max-width: 575px) {
-    .page-section2__hero-title {
-      font-size: 24px; } }
-  @media (max-width: 479px) {
-    .page-section2__hero-title {
-      font-size: 22px; } }
-  @media (max-width: 383px) {
-    .page-section2__hero-title {
-      font-size: 21px; } }
-
-.page-section2__hero-title.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  margin: 66px 0px 0px; }
-  @media (max-width: 1199px) {
-    .page-section2__hero-title.layout {
-      margin: 57px 0px 0px; } }
-  @media (max-width: 991px) {
-    .page-section2__hero-title.layout {
-      margin: 47px 0px 0px; } }
-  @media (max-width: 767px) {
-    .page-section2__hero-title.layout {
-      margin: 38px 0px 0px; } }
-  @media (max-width: 575px) {
-    .page-section2__hero-title.layout {
-      margin: 33px 0px 0px; } }
-  @media (max-width: 479px) {
-    .page-section2__hero-title.layout {
-      margin: 29px 0px 0px; } }
-  @media (max-width: 383px) {
-    .page-section2__hero-title.layout {
-      margin: 26px 0px 0px; } }
-
-.page-section2__medium-title {
-  display: flex;
-  justify-content: center;
-  font: 24px/1.2 "Space Mono", Helvetica, Arial, serif;
-  color: white;
-  text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.247059);
-  letter-spacing: -2.4px; }
-  @media (max-width: 1199px) {
-    .page-section2__medium-title {
-      font-size: 22px;
-      text-align: center; } }
-  @media (max-width: 991px) {
-    .page-section2__medium-title {
-      font-size: 20px; } }
-  @media (max-width: 767px) {
-    .page-section2__medium-title {
-      font-size: 19px; } }
-  @media (max-width: 575px) {
-    .page-section2__medium-title {
-      font-size: 18px; } }
-  @media (max-width: 479px) {
-    .page-section2__medium-title {
-      font-size: 17px; } }
-  @media (max-width: 383px) {
-    .page-section2__medium-title {
-      font-size: 16px; } }
-
-.page-section2__medium-title.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  margin: 26px 0px 79px; }
-  @media (max-width: 1199px) {
-    .page-section2__medium-title.layout {
-      margin: 23px 0px 67px; } }
-  @media (max-width: 991px) {
-    .page-section2__medium-title.layout {
-      margin: 19px 0px 54px; } }
-  @media (max-width: 767px) {
-    .page-section2__medium-title.layout {
-      margin: 16px 0px 43px; } }
-  @media (max-width: 575px) {
-    .page-section2__medium-title.layout {
-      margin: 15px 0px 37px; } }
-  @media (max-width: 479px) {
-    .page-section2__medium-title.layout {
-      margin: 13px 0px 31px; } }
-  @media (max-width: 383px) {
-    .page-section2__medium-title.layout {
-      margin: 12px 0px 28px; } }
-
-.page-section3__section3 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section3__section3.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content; }
-
-.page-section3__image2 {
-  background: var(--src) center center/contain no-repeat; }
-
-.page-section3__image2.layout {
-  position: relative;
-  height: 5px;
-  width: 87.5%;
-  margin: 40px auto 15px; }
-  @media (max-width: 1399px) {
-    .page-section3__image2.layout {
-      width: 90.32%; } }
-  @media (max-width: 1199px) {
-    .page-section3__image2.layout {
-      width: 92.56%;
-      margin: 35px auto 13px; } }
-  @media (max-width: 991px) {
-    .page-section3__image2.layout {
-      width: 94.32%;
-      margin: 29px auto 11px; } }
-  @media (max-width: 767px) {
-    .page-section3__image2.layout {
-      width: 95.68%;
-      margin: 24px auto 9px; } }
-  @media (max-width: 575px) {
-    .page-section3__image2.layout {
-      width: 96.72%;
-      margin: 21px auto 9px; } }
-  @media (max-width: 479px) {
-    .page-section3__image2.layout {
-      width: 97.52%;
-      margin: 19px auto 8px; } }
-  @media (max-width: 383px) {
-    .page-section3__image2.layout {
-      width: 98.13%;
-      margin: 17px auto 7px; } }
-
-.page-section4__section4 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section4__section4.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content; }
-
-.page-section4__block4 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section4__block4.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  width: 87.5%;
-  margin: 28px auto 0px; }
-  @media (max-width: 1399px) {
-    .page-section4__block4.layout {
-      width: 90.32%; } }
-  @media (max-width: 1199px) {
-    .page-section4__block4.layout {
-      width: 92.56%;
-      margin: 25px auto 0px; } }
-  @media (max-width: 991px) {
-    .page-section4__block4.layout {
-      width: 94.32%;
-      margin: 21px auto 0px; } }
-  @media (max-width: 767px) {
-    .page-section4__block4.layout {
-      width: 95.68%;
-      margin: 18px auto 0px; } }
-  @media (max-width: 575px) {
-    .page-section4__block4.layout {
-      width: 96.72%;
-      margin: 16px auto 0px; } }
-  @media (max-width: 479px) {
-    .page-section4__block4.layout {
-      width: 97.52%;
-      margin: 14px auto 0px; } }
-  @media (max-width: 383px) {
-    .page-section4__block4.layout {
-      width: 98.13%;
-      margin: 13px auto 0px; } }
-
-.page-section4__group {
-  display: flex;
-  flex-direction: column;
-  background: var(--src) center center/contain no-repeat;
-  border: 1px solid white;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.247059)); }
-
-.page-section4__group.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content; }
-
-.page-section4__block5 {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.25); }
-
-.page-section4__block5.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  margin: 149px 0px 167px; }
-  @media (max-width: 1199px) {
-    .page-section4__block5.layout {
-      margin: 120px 0px 133px; } }
-  @media (max-width: 991px) {
-    .page-section4__block5.layout {
-      margin: 88px 0px 97px; } }
-  @media (max-width: 767px) {
-    .page-section4__block5.layout {
-      margin: 61px 0px 65px; } }
-  @media (max-width: 575px) {
-    .page-section4__block5.layout {
-      margin: 47px 0px 50px; } }
-  @media (max-width: 479px) {
-    .page-section4__block5.layout {
-      margin: 34px 0px; } }
-  @media (max-width: 383px) {
-    .page-section4__block5.layout {
-      margin: 24px 0px 23px; } }
-
-.page-section4__flex1 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section4__flex1.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  width: 75.56%;
-  margin: 65px auto; }
-  @media (max-width: 1199px) {
-    .page-section4__flex1.layout {
-      margin: 56px auto; } }
-  @media (max-width: 991px) {
-    .page-section4__flex1.layout {
-      width: 80.47%;
-      margin: 46px auto; } }
-  @media (max-width: 767px) {
-    .page-section4__flex1.layout {
-      width: 84.6%;
-      margin: 37px auto; } }
-  @media (max-width: 575px) {
-    .page-section4__flex1.layout {
-      width: 87.99%;
-      margin: 33px auto; } }
-  @media (max-width: 479px) {
-    .page-section4__flex1.layout {
-      width: 90.71%;
-      margin: 29px auto; } }
-  @media (max-width: 383px) {
-    .page-section4__flex1.layout {
-      width: 92.87%;
-      margin: 26px auto; } }
-
-.page-section4__hero-title {
-  display: flex;
-  justify-content: center;
-  font: 700 36px/1.2 "Space Mono", Helvetica, Arial, serif;
-  color: white;
-  text-align: center;
-  letter-spacing: -3.6px; }
-  @media (max-width: 1199px) {
-    .page-section4__hero-title {
-      font-size: 32px;
-      text-align: center; } }
-  @media (max-width: 991px) {
-    .page-section4__hero-title {
-      font-size: 29px; } }
-  @media (max-width: 767px) {
-    .page-section4__hero-title {
-      font-size: 25px; } }
-  @media (max-width: 575px) {
-    .page-section4__hero-title {
-      font-size: 24px; } }
-  @media (max-width: 479px) {
-    .page-section4__hero-title {
-      font-size: 22px; } }
-  @media (max-width: 383px) {
-    .page-section4__hero-title {
-      font-size: 21px; } }
-
-.page-section4__hero-title.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content; }
-
-.page-section4__medium-title {
-  display: flex;
-  justify-content: center;
-  font: 24px/1.2 "Space Mono", Helvetica, Arial, serif;
-  color: white;
-  text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.247059);
-  letter-spacing: -2.4px; }
-  @media (max-width: 1199px) {
-    .page-section4__medium-title {
-      font-size: 22px;
-      text-align: center; } }
-  @media (max-width: 991px) {
-    .page-section4__medium-title {
-      font-size: 20px; } }
-  @media (max-width: 767px) {
-    .page-section4__medium-title {
-      font-size: 19px; } }
-  @media (max-width: 575px) {
-    .page-section4__medium-title {
-      font-size: 18px; } }
-  @media (max-width: 479px) {
-    .page-section4__medium-title {
-      font-size: 17px; } }
-  @media (max-width: 383px) {
-    .page-section4__medium-title {
-      font-size: 16px; } }
-
-.page-section4__medium-title.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  margin: 26px 0px 133px; }
-  @media (max-width: 1199px) {
-    .page-section4__medium-title.layout {
-      margin: 23px 0px 108px; } }
-  @media (max-width: 991px) {
-    .page-section4__medium-title.layout {
-      margin: 19px 0px 80px; } }
-  @media (max-width: 767px) {
-    .page-section4__medium-title.layout {
-      margin: 16px 0px 57px; } }
-  @media (max-width: 575px) {
-    .page-section4__medium-title.layout {
-      margin: 15px 0px 45px; } }
-  @media (max-width: 479px) {
-    .page-section4__medium-title.layout {
-      margin: 13px 0px 33px; } }
-  @media (max-width: 383px) {
-    .page-section4__medium-title.layout {
-      margin: 12px 0px 25px; } }
-
-.page-section5__section5 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section5__section5.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content; }
-
-.page-section5__image2 {
-  background: var(--src) center center/contain no-repeat; }
-
-.page-section5__image2.layout {
-  position: relative;
-  height: 5px;
-  width: 87.5%;
-  margin: 41px auto 0px; }
-  @media (max-width: 1399px) {
-    .page-section5__image2.layout {
-      width: 90.32%; } }
-  @media (max-width: 1199px) {
-    .page-section5__image2.layout {
-      width: 92.56%;
-      margin: 35px auto 0px; } }
-  @media (max-width: 991px) {
-    .page-section5__image2.layout {
-      width: 94.32%;
-      margin: 29px auto 0px; } }
-  @media (max-width: 767px) {
-    .page-section5__image2.layout {
-      width: 95.68%;
-      margin: 24px auto 0px; } }
-  @media (max-width: 575px) {
-    .page-section5__image2.layout {
-      width: 96.72%;
-      margin: 21px auto 0px; } }
-  @media (max-width: 479px) {
-    .page-section5__image2.layout {
-      width: 97.52%;
-      margin: 19px auto 0px; } }
-  @media (max-width: 383px) {
-    .page-section5__image2.layout {
-      width: 98.13%;
-      margin: 17px auto 0px; } }
-
-.page-section6__section6 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section6__section6.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content; }
-
-.page-section6__block3 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section6__block3.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  width: 22.99%;
-  margin: 84px 70.76% 0px 6.25%; }
-  @media (max-width: 1199px) {
-    .page-section6__block3.layout {
-      margin: 71px 70.76% 0px 6.25%; } }
-  @media (max-width: 991px) {
-    .page-section6__block3.layout {
-      margin: 56px 70.76% 0px 6.25%; } }
-  @media (max-width: 767px) {
-    .page-section6__block3.layout {
-      margin: 44px 70.76% 0px 6.25%; } }
-  @media (max-width: 575px) {
-    .page-section6__block3.layout {
-      margin: 38px 70.76% 0px 6.25%; } }
-  @media (max-width: 479px) {
-    .page-section6__block3.layout {
-      margin: 32px 70.76% 0px 6.25%; } }
-  @media (max-width: 383px) {
-    .page-section6__block3.layout {
-      margin: 27px 70.76% 0px 6.25%; } }
-
-.page-section6__image1 {
-  background: var(--src) center center/contain no-repeat;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.247059)); }
-
-.page-section6__image1.layout {
-  position: relative;
-  height: 225px;
-  margin: 0px 6px 0px 0px; }
-  @media (max-width: 1199px) {
-    .page-section6__image1.layout {
-      margin: 0px 5px 0px 0px; } }
-
-.page-section6__big-title {
-  font: 700 28px/1.2 "Space Mono", Helvetica, Arial, serif;
-  color: white;
-  letter-spacing: -2.8px; }
-  @media (max-width: 1199px) {
-    .page-section6__big-title {
-      font-size: 25px;
-      text-align: left; } }
-  @media (max-width: 991px) {
-    .page-section6__big-title {
-      font-size: 23px; } }
-  @media (max-width: 767px) {
-    .page-section6__big-title {
-      font-size: 20px; } }
-  @media (max-width: 575px) {
-    .page-section6__big-title {
-      font-size: 19px; } }
-  @media (max-width: 479px) {
-    .page-section6__big-title {
-      font-size: 18px; } }
-  @media (max-width: 383px) {
-    .page-section6__big-title {
-      font-size: 17px; } }
-
-.page-section6__big-title.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  margin: 10px 10px 0px; }
-  @media (max-width: 1199px) {
-    .page-section6__big-title.layout {
-      margin: 9px 9px 0px; } }
-  @media (max-width: 991px) {
-    .page-section6__big-title.layout {
-      margin: 7px 7px 0px; } }
-  @media (max-width: 767px) {
-    .page-section6__big-title.layout {
-      margin: 6px 6px 0px; } }
-  @media (max-width: 479px) {
-    .page-section6__big-title.layout {
-      margin: 5px 5px 0px; } }
-
-.page-section6__medium-title {
-  font: 24px/1.2 "Space Mono", Helvetica, Arial, serif;
-  color: white;
-  letter-spacing: -2.4px; }
-  @media (max-width: 1199px) {
-    .page-section6__medium-title {
-      font-size: 22px;
-      text-align: left; } }
-  @media (max-width: 991px) {
-    .page-section6__medium-title {
-      font-size: 20px; } }
-  @media (max-width: 767px) {
-    .page-section6__medium-title {
-      font-size: 19px; } }
-  @media (max-width: 575px) {
-    .page-section6__medium-title {
-      font-size: 18px; } }
-  @media (max-width: 479px) {
-    .page-section6__medium-title {
-      font-size: 17px; } }
-  @media (max-width: 383px) {
-    .page-section6__medium-title {
-      font-size: 16px; } }
-
-.page-section6__medium-title.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  margin: 6px 0px 91px; }
-  @media (max-width: 1199px) {
-    .page-section6__medium-title.layout {
-      margin: 5px 0px 76px; } }
-  @media (max-width: 991px) {
-    .page-section6__medium-title.layout {
-      margin: 5px 0px 60px; } }
-  @media (max-width: 767px) {
-    .page-section6__medium-title.layout {
-      margin: 5px 0px 46px; } }
-  @media (max-width: 575px) {
-    .page-section6__medium-title.layout {
-      margin: 5px 0px 39px; } }
-  @media (max-width: 479px) {
-    .page-section6__medium-title.layout {
-      margin: 5px 0px 32px; } }
-  @media (max-width: 383px) {
-    .page-section6__medium-title.layout {
-      margin: 5px 0px 27px; } }
-
-.page-section7__section7 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section7__section7.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content; }
-
-.page-section7__cover-block {
-  display: flex;
-  flex-direction: column;
-  background-color: black; }
-
-.page-section7__cover-block.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  margin: 23px 0px 0px; }
-  @media (max-width: 1199px) {
-    .page-section7__cover-block.layout {
-      margin: 20px 0px 0px; } }
-  @media (max-width: 991px) {
-    .page-section7__cover-block.layout {
-      margin: 17px 0px 0px; } }
-  @media (max-width: 767px) {
-    .page-section7__cover-block.layout {
-      margin: 14px 0px 0px; } }
-  @media (max-width: 575px) {
-    .page-section7__cover-block.layout {
-      margin: 13px 0px 0px; } }
-  @media (max-width: 479px) {
-    .page-section7__cover-block.layout {
-      margin: 12px 0px 0px; } }
-  @media (max-width: 383px) {
-    .page-section7__cover-block.layout {
-      margin: 11px 0px 0px; } }
-
-@media (max-width: 1199px) {
-  .page-section7__highlights-box {
-    align-items: flex-start;
-    justify-content: flex-start; } }
-
-@media (max-width: 991px) {
-  .page-section7__highlights-box {
-    align-items: flex-start;
-    justify-content: flex-start; } }
-
-@media (max-width: 767px) {
-  .page-section7__highlights-box {
-    align-items: flex-start;
-    justify-content: flex-start; } }
-
-@media (max-width: 479px) {
-  .page-section7__highlights-box {
-    align-items: flex-start;
-    justify-content: flex-start; } }
-
-.page-section7__highlights-box.layout {
-  position: absolute;
-  top: 61px;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  bottom: 31px;
-  left: 0px;
-  right: 0px;
-  width: 88.19%;
-  margin: 0px 5.49% 0px 6.32%; }
-  @media (max-width: 1199px) {
-    .page-section7__highlights-box.layout {
-      top: 52px;
-      bottom: 27px; } }
-  @media (max-width: 991px) {
-    .page-section7__highlights-box.layout {
-      top: 43px;
-      bottom: 23px; } }
-  @media (max-width: 767px) {
-    .page-section7__highlights-box.layout {
-      top: 35px;
-      bottom: 19px; } }
-  @media (max-width: 575px) {
-    .page-section7__highlights-box.layout {
-      top: 31px;
-      bottom: 18px; } }
-  @media (max-width: 479px) {
-    .page-section7__highlights-box.layout {
-      top: 27px;
-      bottom: 16px; } }
-  @media (max-width: 383px) {
-    .page-section7__highlights-box.layout {
-      top: 24px;
-      bottom: 15px; } }
-
-.page-section7__highlights {
-  overflow: visible;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin: 0px;
-  font: 18px/2.22 "Share Tech", Helvetica, Arial, serif;
-  color: white;
-  letter-spacing: 0px;
-  white-space: pre-wrap; }
-  @media (max-width: 1199px) {
-    .page-section7__highlights {
-      font-size: 17px;
-      text-align: left; } }
-  @media (max-width: 991px) {
-    .page-section7__highlights {
-      font-size: 16px; } }
-  @media (max-width: 767px) {
-    .page-section7__highlights {
-      font-size: 15px; } }
-  @media (max-width: 479px) {
-    .page-section7__highlights {
-      font-size: 14px; } }
-
-.page-section7__line {
-  background-color: white; }
-
-.page-section7__line.layout {
-  position: absolute;
-  top: 0px;
-  height: 1px;
-  left: 0px;
-  right: 0px;
-  width: 87.5%;
-  margin: 60px auto 111px; }
-  @media (max-width: 1399px) {
-    .page-section7__line.layout {
-      width: 90.32%; } }
-  @media (max-width: 1199px) {
-    .page-section7__line.layout {
-      width: 92.56%;
-      margin: 51px auto 91px; } }
-  @media (max-width: 991px) {
-    .page-section7__line.layout {
-      width: 94.32%;
-      margin: 42px auto 69px; } }
-  @media (max-width: 767px) {
-    .page-section7__line.layout {
-      width: 95.68%;
-      margin: 34px auto 51px; } }
-  @media (max-width: 575px) {
-    .page-section7__line.layout {
-      width: 96.72%;
-      margin: 30px auto 42px; } }
-  @media (max-width: 479px) {
-    .page-section7__line.layout {
-      width: 97.52%;
-      margin: 26px auto 32px; } }
-  @media (max-width: 383px) {
-    .page-section7__line.layout {
-      width: 98.13%;
-      margin: 23px auto 26px; } }
-
-.page-section7__block1 {
-  display: flex;
-  flex-direction: column; }
-
-.page-section7__block1.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  width: 5.28%;
-  margin: 17px 88.4% 120px 6.32%; }
-  @media (max-width: 1199px) {
-    .page-section7__block1.layout {
-      margin: 15px 88.4% 98px 6.32%; } }
-  @media (max-width: 991px) {
-    .page-section7__block1.layout {
-      margin: 13px 88.4% 74px 6.32%; } }
-  @media (max-width: 767px) {
-    .page-section7__block1.layout {
-      margin: 11px 88.4% 53px 6.32%; } }
-  @media (max-width: 575px) {
-    .page-section7__block1.layout {
-      margin: 10px 88.4% 43px 6.32%; } }
-  @media (max-width: 479px) {
-    .page-section7__block1.layout {
-      margin: 9px 88.4% 33px 6.32%; } }
-  @media (max-width: 383px) {
-    .page-section7__block1.layout {
-      margin: 8px 88.4% 26px 6.32%; } }
-
-.page-section7__block2 {
-  display: flex; }
-
-.page-section7__block2.layout {
-  position: relative;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content; }
-
-.page-section7__block2-item {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  flex: 0 1 33px; }
-
-.page-section7__image {
-  background: var(--src) center center/contain no-repeat; }
-
-.page-section7__image.layout {
-  position: relative;
-  height: 35px;
-  width: 33px;
-  min-width: 33px; }
-
-.page-section7__block2-spacer {
-  flex: 0 1 8px; }
-
-.page-section7__block2-item1 {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  flex: 0 1 35px; }
-
-.page-section7__icon {
-  background: var(--src) center center/contain no-repeat; }
-
-.page-section7__icon.layout {
-  position: relative;
-  height: 35px;
-  width: 35px;
-  min-width: 35px; }
-
-    </style>
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/aos@2.3.1/dist/aos.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"
-    ></script>
-  </head>
-
-  <body style="display: flex; flex-direction: column">
-  <!-- ======= section1 ======= --> 
-      <section class="layout page-main">
-        <div class="page-section1__block8 layout">
-          <div class="page-section1__box4 layout"></div>
-          <h3 class="page-section1__subtitle layout">Sign in</h3>
-          <h3 class="page-section1__subtitle1 layout">Data</h3>
-          <h3 class="page-section1__subtitle1 layout1">
-            Insight™ Weather &amp; Co.
-          </h3>
+<html xmlns:th="https://www.thymeleaf.org/">
+<!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
+<head>
+  <meta charset="utf-8" />
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous"
+  />
+  <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+  />
+  <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/css/fonts.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/css/Page.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/css/utils.css}" />
+
+  <script
+          type="text/javascript"
+          src="https://unpkg.com/aos@2.3.1/dist/aos.js"
+  ></script>
+  <script
+          type="text/javascript"
+          src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"
+  ></script>
+</head>
+
+<body style="display: flex; flex-direction: column">
+<!-- ======= section1 ======= -->
+<section class="layout page-main">
+  <div class="page-section1__block8 layout">
+    <div class="page-section1__box4 layout"></div>
+    <h3 class="page-section1__subtitle layout">Sign in</h3>
+    <h3 class="page-section1__subtitle1 layout">Data</h3>
+    <h3 class="page-section1__subtitle1 layout1">
+      Insight™ Weather &amp; Co.
+    </h3>
+  </div>
+</section>
+<comment content="======= End section1 =======" break="true"></comment>
+<main class="page page-main layout">
+  <!-- ======= section2 ======= -->
+  <section class="page-section2__section2 layout">
+    <div class="page-section2__block6 layout">
+      <div
+              th:style="'background: url(' + @{/img/1.png} + ') no-repeat center center fixed;'"
+              class="page-section2__group layout"
+      >
+        <div class="page-section2__block7 layout">
+          <article class="page-section2__flex layout">
+            <h1 class="page-section2__hero-title layout">
+              Welcome to Insight™ Weather cyber-physical project.
+            </h1>
+            <h2 class="page-section2__medium-title layout">
+              Weather data Project of students of NTUU “KPI”.
+            </h2>
+          </article>
         </div>
-      </section>
-      <comment content="======= End section1 =======" break="true"></comment>
-    <main class="page page-main layout">
-      <!-- ======= section2 ======= --> 
-      <section class="page-section2__section2 layout">
-        <div class="page-section2__block6 layout">
-          <div
-            style="background-size: cover;background-position: center;background-image:url(D:/Programs/IntelliJ IDEA Community Edition 2021.2.2/CourseWork/Meteostation/src/main/resources/templates/assets/1.png)"
-            class="page-section2__group layout"
-          >
-            <div class="page-section2__block7 layout">
-              <article class="page-section2__flex layout">
-                <h1 class="page-section2__hero-title layout">
-                  Welcome to Insight™ Weather cyber-physical project.
-                </h1>
-                <h2 class="page-section2__medium-title layout">
-                  Weather data Project of students of NTUU “KPI”.
-                </h2>
-              </article>
-            </div>
+      </div>
+    </div>
+  </section>
+  <comment content="======= End section2 =======" break="true"></comment
+  ><!-- ======= section3 ======= -->
+  <section class="page-section3__section3 layout">
+    <div
+            th:style="'background-size: cover;background-position: center;background-image:url(' + @{/img/2.png} + ');'"
+            class="page-section3__image2 layout"
+    ></div>
+  </section>
+  <comment content="======= End section3 =======" break="true"></comment
+  ><!-- ======= section4 ======= -->
+  <section class="page-section4__section4 layout">
+    <div class="page-section4__block4 layout">
+      <div
+              style="background-size: cover;background-position: center;background-image:url(./assets/3.png)"
+              class="page-section4__group layout"
+      >
+        <div class="page-section4__block5 layout">
+          <div class="page-section4__flex1 layout">
+            <h1 class="page-section4__hero-title layout">
+              What Insight™ Weather project is about?
+            </h1>
+            <h2 class="page-section4__medium-title layout">
+              Being the project of students, that study at the NTUU “KPI”
+              (National Technical University of Ukraine “Kyiv Politechnic
+              Institute”), it’s goal is to serve as a service, that provides
+              collecting, processing, tools for restoring and displaying
+              real physical data. This project is far from complete, but its
+              development is currently opening up many opportunities for
+              both students-developers and customers.
+            </h2>
           </div>
         </div>
-      </section>
-      <comment content="======= End section2 =======" break="true"></comment
-      ><!-- ======= section3 ======= --> 
-      <section class="page-section3__section3 layout">
-        <div
-          style="background-size: cover;background-position: center;background-image:url(D:/Programs/IntelliJ IDEA Community Edition 2021.2.2/CourseWork/Meteostation/src/main/resources/templates/assets/2.png)"
-          class="page-section3__image2 layout"
-        ></div>
-      </section>
-      <comment content="======= End section3 =======" break="true"></comment
-      ><!-- ======= section4 ======= --> 
-      <section class="page-section4__section4 layout">
-        <div class="page-section4__block4 layout">
-          <div
-            style="background-size: cover;background-position: center;background-image:url(D:/Programs/IntelliJ IDEA Community Edition 2021.2.2/CourseWork/Meteostation/src/main/resources/templates/assets/3.png)"
-            class="page-section4__group layout"
-          >
-            <div class="page-section4__block5 layout">
-              <div class="page-section4__flex1 layout">
-                <h1 class="page-section4__hero-title layout">
-                  What Insight™ Weather project is about?
-                </h1>
-                <h2 class="page-section4__medium-title layout">
-                  Being the project of students, that study at the NTUU “KPI”
-                  (National Technical University of Ukraine “Kyiv Politechnic
-                  Institute”), it’s goal is to serve as a service, that provides
-                  collecting, processing, tools for restoring and displaying
-                  real physical data. This project is far from complete, but its
-                  development is currently opening up many opportunities for
-                  both students-developers and customers.
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <comment content="======= End section4 =======" break="true"></comment
-      ><!-- ======= section5 ======= --> 
-      <section class="page-section5__section5 layout">
-        <div
-          style="background-size: cover;background-position: center;background-image:url(D:/Programs/IntelliJ IDEA Community Edition 2021.2.2/CourseWork/Meteostation/src/main/resources/templates/assets/2.png)"
-          class="page-section5__image2 layout"
-        ></div>
-      </section>
-      <comment content="======= End section5 =======" break="true"></comment
-      ><!-- ======= section6 ======= --> 
-      <section class="page-section6__section6 layout">
-        <div class="page-section6__block3 layout">
-          <div
-            style="background-size: cover;background-position: center;background-image:url(D:/Programs/IntelliJ IDEA Community Edition 2021.2.2/CourseWork/Meteostation/src/main/resources/templates/assets/4.png)"
-            class="page-section6__image1 layout"
-          ></div>
-          <h1 class="page-section6__big-title layout">Data</h1>
-          <h2 class="page-section6__medium-title layout">Description</h2>
-        </div>
-      </section>
-      <comment content="======= End section6 =======" break="true"></comment
-      ><!-- ======= section7 ======= --> 
-      <section class="page-section7__section7 layout">
-        <div class="page-section7__cover-block layout">
-          <h4 class="page-section7__highlights-box layout">
+      </div>
+    </div>
+  </section>
+  <comment content="======= End section4 =======" break="true"></comment
+  ><!-- ======= section5 ======= -->
+  <section class="page-section5__section5 layout">
+    <div
+            style="background-size: cover;background-position: center;background-image:url(./assets/2.png)"
+            class="page-section5__image2 layout"
+    ></div>
+  </section>
+  <comment content="======= End section5 =======" break="true"></comment
+  ><!-- ======= section6 ======= -->
+  <section class="page-section6__section6 layout">
+    <div class="page-section6__block3 layout">
+      <div
+              style="background-size: cover;background-position: center;background-image:url(./assets/4.png)"
+              class="page-section6__image1 layout"
+      ></div>
+      <h1 class="page-section6__big-title layout">Data</h1>
+      <h2 class="page-section6__medium-title layout">Description</h2>
+    </div>
+  </section>
+  <comment content="======= End section6 =======" break="true"></comment
+  ><!-- ======= section7 ======= -->
+  <section class="page-section7__section7 layout">
+    <div class="page-section7__cover-block layout">
+      <h4 class="page-section7__highlights-box layout">
             <pre class="page-section7__highlights">
 © 2022 Insight Company. All rights reserved. All trademarks are property of their respective owners in the US and other countries.
 VAT included in all prices where applicable.   Privacy Policy   |   Service terms   |  Refunds   |   Cookies
 </pre
-            >
-          </h4>
-          <hr class="page-section7__line layout" />
-          <div class="page-section7__block1 layout">
-            <div class="page-section7__block2 layout">
-              <div class="page-section7__block2-item">
-                <div
-                  style="background-size: cover;background-position: center;background-image:url(D:/Programs/IntelliJ IDEA Community Edition 2021.2.2/CourseWork/Meteostation/src/main/resources/templates/assets/5.png)"
-                  class="page-section7__image layout"
-                ></div>
-              </div>
-              <div class="page-section7__block2-spacer"></div>
-              <div class="page-section7__block2-item1">
-                <div
-                  style="background-size: cover;background-position: center;background-image:url(D:/Programs/IntelliJ IDEA Community Edition 2021.2.2/CourseWork/Meteostation/src/main/resources/templates/assets/6.png)"
-                  class="page-section7__icon layout"
-                ></div>
-              </div>
-            </div>
+>
+      </h4>
+      <hr class="page-section7__line layout" />
+      <div class="page-section7__block1 layout">
+        <div class="page-section7__block2 layout">
+          <div class="page-section7__block2-item">
+            <div
+                    style="background-size: cover;background-position: center;background-image:url(./assets/5.png)"
+                    class="page-section7__image layout"
+            ></div>
+          </div>
+          <div class="page-section7__block2-spacer"></div>
+          <div class="page-section7__block2-item1">
+            <div
+                    style="background-size: cover;background-position: center;background-image:url(./assets/6.png)"
+                    class="page-section7__icon layout"
+            ></div>
           </div>
         </div>
-      </section>
-      <!-- ======= End section7 ======= --> 
+      </div>
+    </div>
+  </section>
+  <!-- ======= End section7 ======= -->
 
-    </main>
-    <script type="text/javascript">
+</main>
+<script type="text/javascript">
       AOS.init();
     </script>
-  </body>
+</body>
 </html>

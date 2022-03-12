@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="https://www.thymeleaf.org/">
 <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
 <head>
   <meta charset="utf-8" />
@@ -20,9 +20,10 @@
           type="text/css"
           href="https://unpkg.com/aos@2.3.1/dist/aos.css"
   />
-  <link rel="stylesheet" type="text/css" href="/css/common.css" />
-  <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
-  <link rel="stylesheet" type="text/css" href="/css/Page.css" />
+  <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/css/fonts.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/css/Page.css}" />
+  <link rel="stylesheet" type="text/css" th:href="@{/css/utils.css}" />
 
   <script
           type="text/javascript"
@@ -40,11 +41,17 @@
   <section class="page-section1__section1 layout">
     <div class="page-section1__block8 layout">
       <div class="page-section1__box4 layout"></div>
-      <h3 class="page-section1__subtitle layout">Sign in</h3>
-      <h3 class="page-section1__subtitle1 layout">Data</h3>
-      <h3 class="page-section1__subtitle1 layout1">
-        Insight™ Weather &amp; Co.
-      </h3>
+      <a href="#">
+        <h3 class="page-section1__subtitle layout">Sign in</h3>
+      </a>
+      <a href="#">
+        <h3 class="page-section1__subtitle1 layout">Data</h3>
+      </a>
+      <a href="#">
+        <h3 class="page-section1__subtitle1 layout1">
+          Insight™ Weather &amp; Co.
+        </h3>
+      </a>
     </div>
   </section>
   <comment content="======= End section1 =======" break="true"></comment
@@ -52,7 +59,7 @@
   <section class="page-section2__section2 layout">
     <div class="page-section2__block6 layout">
       <div
-              style="--src:url(/assets/cfde81f13a46a6d7aaa3754ac33cd9f6.png)"
+              th:style="'--src:url(' + @{/img/1.png} + ');'"
               class="page-section2__group layout"
       >
         <div class="page-section2__block7 layout">
