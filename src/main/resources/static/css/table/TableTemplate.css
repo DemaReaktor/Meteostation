@@ -1,0 +1,177 @@
+/* This source code is exported from pxCode, you can get more document from https://www.pxcode.io */
+.table-template-main {
+  display: flex;
+  flex-direction: column;
+  background-color: #171655; }
+
+.table-template-main.layout {
+  position: relative;
+  overflow: hidden;
+  min-height: 2092px;
+  flex-shrink: 0; }
+
+.table-template-section1__section1 {
+  display: flex;
+  flex-direction: column; }
+
+.table-template-section1__section1.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content; }
+
+.table-template-section1__block1 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.607);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.247059); }
+
+.table-template-section1__block1.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content; }
+
+.table-template-section1__flex {
+  display: flex; }
+
+.table-template-section1__flex.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin: 18px 40px; }
+  @media (max-width: 1199px) {
+    .table-template-section1__flex.layout {
+      margin: 16px 35px; } }
+  @media (max-width: 991px) {
+    .table-template-section1__flex.layout {
+      margin: 13px 29px; } }
+  @media (max-width: 767px) {
+    .table-template-section1__flex.layout {
+      margin: 11px 24px; } }
+  @media (max-width: 575px) {
+    .table-template-section1__flex.layout {
+      margin: 10px 21px; } }
+  @media (max-width: 479px) {
+    .table-template-section1__flex.layout {
+      margin: 9px 19px; } }
+  @media (max-width: 383px) {
+    .table-template-section1__flex.layout {
+      margin: 9px 17px; } }
+
+.table-template-section1__flex-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 0 1 498px; }
+
+.table-template-section1__flex1 {
+  display: flex; }
+
+.table-template-section1__flex1.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin: 0px 0px 5px 179px; }
+  @media (max-width: 1199px) {
+    .table-template-section1__flex1.layout {
+      margin: 0px 0px 5px 142px; } }
+  @media (max-width: 991px) {
+    .table-template-section1__flex1.layout {
+      margin: 0px 0px 5px 103px; } }
+  @media (max-width: 767px) {
+    .table-template-section1__flex1.layout {
+      margin: 0px 0px 5px 68px; } }
+  @media (max-width: 575px) {
+    .table-template-section1__flex1.layout {
+      margin: 0px 0px 5px 51px; } }
+  @media (max-width: 479px) {
+    .table-template-section1__flex1.layout {
+      margin: 0px 0px 5px 34px; } }
+  @media (max-width: 383px) {
+    .table-template-section1__flex1.layout {
+      margin: 0px 0px 5px 23px; } }
+
+.table-template-section1__subtitle1 {
+  font: 20px/1.2 "Space Mono", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: -2px; }
+  @media (max-width: 1199px) {
+    .table-template-section1__subtitle1 {
+      font-size: 19px;
+      text-align: left; } }
+  @media (max-width: 991px) {
+    .table-template-section1__subtitle1 {
+      font-size: 18px; } }
+  @media (max-width: 767px) {
+    .table-template-section1__subtitle1 {
+      font-size: 17px; } }
+  @media (max-width: 479px) {
+    .table-template-section1__subtitle1 {
+      font-size: 16px; } }
+
+.table-template-section1__subtitle1.layout {
+  position: relative;
+  flex: 0 0 auto;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content; }
+
+.table-template-section1__flex1-spacer {
+  flex: 0 1 42px; }
+
+.table-template-section1__flex-spacer {
+  flex: 0 1 785px; }
+
+.table-template-section1__subtitle {
+  display: flex;
+  justify-content: flex-end;
+  font: 20px/1.2 "Space Mono", Helvetica, Arial, serif;
+  color: #bfbfbf;
+  text-align: right;
+  letter-spacing: -2px;
+  opacity: 0.7; }
+  @media (max-width: 1199px) {
+    .table-template-section1__subtitle {
+      font-size: 19px;
+      text-align: right; } }
+  @media (max-width: 991px) {
+    .table-template-section1__subtitle {
+      font-size: 18px; } }
+  @media (max-width: 767px) {
+    .table-template-section1__subtitle {
+      font-size: 17px; } }
+  @media (max-width: 479px) {
+    .table-template-section1__subtitle {
+      font-size: 16px; } }
+
+.table-template-section1__subtitle.layout {
+  position: relative;
+  flex: 0 0 auto;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin: 0px 0px 5px; }
+
+.table-template-section2__section2 {
+  display: flex;
+  flex-direction: column; }
+
+.table-template-section2__section2.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content; }
+
+.table-template-section2__box {
+  background-color: #dae3e5;
+  box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.247059);
+  border: 3px solid white; }
+
+.table-template-section2__box.layout {
+  position: relative;
+  height: 2027px;
+  width: 84.72%;
+  margin: 0px 0% 0px 15.28%; }

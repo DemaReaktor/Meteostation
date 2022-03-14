@@ -2,6 +2,7 @@
 <html xmlns:th="https://www.thymeleaf.org/">
   <!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
   <head>
+    <title th:text="${title}"></title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -20,11 +21,11 @@
       type="text/css"
       href="https://unpkg.com/aos@2.3.1/dist/aos.css"
     />
-    <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/css/fonts.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/css/Landing.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/css/utils.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/css/Welcome.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/landing/common.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/landing/fonts.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/landing/Landing.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/landing/utils.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/landing/Welcome.css}" />
 
     <script
       type="text/javascript"
