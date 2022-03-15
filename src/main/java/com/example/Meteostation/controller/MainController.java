@@ -9,6 +9,6 @@ public class MainController {
     @GetMapping("/")
     public String landingPage(Model model){
         model.addAttribute("title", "Insight Weather");
-        return "Landing";//"home";//null;
+        return "tables";//"home";//null;
     }
 }
