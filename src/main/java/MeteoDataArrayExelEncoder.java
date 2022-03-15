@@ -10,7 +10,8 @@ import java.io.FileOutputStream;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedList;
-/*
+
+//TODO Fix errors
 public class MeteoDataArrayExelEncoder {
 
     public static MeteoData[] read(String fileName, int start, int month)throws Exception{
@@ -163,4 +164,3 @@ switch (cell.getColumnIndex()){
         workbook.write(outFile);
 }
 }
-*/
